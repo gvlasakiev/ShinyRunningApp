@@ -32,8 +32,6 @@ public class PaceActivity extends Activity {
     private EditText mEditPaceSeconds;
 
     private EditText mEditDistance;
-    private FirebaseFirestore mDb;
-    private Repository<Workout> mSuperheroesRepository;
 
 
     @Override
@@ -41,7 +39,7 @@ public class PaceActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mDb = FirebaseFirestore.getInstance();
+        //mDb = FirebaseFirestore.getInstance();
 
         mClickPace = findViewById(R.id.clickPace);
         mClickSpeed = findViewById(R.id.clickSpeed);
@@ -62,15 +60,6 @@ public class PaceActivity extends Activity {
         mEditDistance = findViewById(R.id.editDistanceKm);
         mButtonPace = findViewById(R.id.buttonPace);
         mBtnTime = findViewById(R.id.buttonTime);
-
-
-        mSuperheroesRepository = new FirebaseRepository<>(Superhero.class);
-
-        mSuperheroesRepository.getAll( superheroes -> {
-            for (Superhero hero: superheroes) {
-                mEditDistance.setText(hero.name);
-            }
-        });
 
         mBtnTime.setOnClickListener(
                 (view) -> {
@@ -124,7 +113,7 @@ public class PaceActivity extends Activity {
                     mEditPaceMinutes.setText(vall[0]);
                     mEditPaceSeconds.setText(proverka2);
 
-                    Toast.makeText(MainActivity.this , speedInMetersPerSeconds+" sec ", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MainActivity.this , speedInMetersPerSeconds+" sec ", Toast.LENGTH_SHORT).show();
                 }
         );
 
