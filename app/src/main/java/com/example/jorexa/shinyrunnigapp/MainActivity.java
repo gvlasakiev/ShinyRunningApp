@@ -3,8 +3,7 @@ package com.example.jorexa.shinyrunnigapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Fragment;
-import android.os.Parcelable;
+
 import android.support.v4.app.ListFragment;
 import android.widget.TextView;
 
@@ -14,13 +13,10 @@ import com.example.jorexa.shinyrunnigapp.repositories.base.Repository;
 import com.example.jorexa.shinyrunnigapp.uiutils.Navigator;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.io.Serializable;
-
 public class MainActivity extends Activity  implements Navigator{
 
     private FirebaseFirestore mDb;
     private Repository<Workout> mWorkoutsRepository;
-    private TextView hello;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +24,6 @@ public class MainActivity extends Activity  implements Navigator{
         setContentView(R.layout.activity_main);
 
         mDb = FirebaseFirestore.getInstance();
-        //hello = findViewById(R.id.hello);
 
         //ListWorkouts listWorkouts = ListWorkouts.newInstance();
         //listWorkouts.setNavigator(this);
@@ -43,7 +38,7 @@ public class MainActivity extends Activity  implements Navigator{
 
         this.getFragmentManager()
                 .beginTransaction()
-                .replace(R.id.listWorkouts, pace).commit();
+                .replace(R.id.listWorkouts, addWorkout).commit();
 
 
         mWorkoutsRepository = new FirebaseRepository<>(Workout.class);

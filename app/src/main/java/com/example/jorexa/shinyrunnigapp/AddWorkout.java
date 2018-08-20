@@ -66,20 +66,23 @@ public class AddWorkout extends Fragment implements View.OnClickListener {
         String distance = workoutDistance.getText().toString();
         String time = workoutTime.getText().toString();
 
+        if (!name.isEmpty() && !distance.isEmpty() && !time.isEmpty()) {
+
         Workout activity = new Workout(name, distance, time);
         workoutAdd.setEnabled(false);
 
-//        Superhero hero = new Superhero("RapKiller", "Georgi Dimitrow");
         mDb.collection("workouts").add(activity);
 
-        Toast.makeText(getContext(), workoutName.getText()+"=>"+workoutTime.getText()+"=>"+workoutDistance.getText(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "Successful recording!", Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(
                 getContext(),
                 WorkoutsViewActivity.class
-                //Show activity from this type.
         );
         startActivity(intent);
 
+        } else {
+            Toast.makeText(getContext(), "Fill in all fields!", Toast.LENGTH_SHORT).show();
+        }
     }
 }
