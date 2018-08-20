@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorkoutDetailsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/workoutDetailString"
+            android:text="Workout Details"
+            android:textSize="35dp"
+            android:textColor="@android:color/holo_green_light"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_below="@+id/workoutDetailString"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="4dp"
+            android:textSize="25dp"
+            android:id="@+id/workoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:layout_below="@+id/workoutName"
+            android:textSize="25dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/workoutDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:layout_below="@+id/workoutDate"
+            android:textSize="25dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/workoutDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:layout_below="@+id/workoutDistance"
+            android:id="@+id/workoutTime"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="4dp"
+            android:textSize="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddWorkout">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/workoutText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD WORKOUT"
+        android:textSize="35dp"
+        />
+
+    <EditText
+        android:layout_below="@+id/workoutText"
+        android:id="@+id/workoutName"
+        android:hint="Workout name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/workoutTime"
+        android:hint="Running time"
+        android:layout_below="@+id/workoutName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_below="@+id/workoutTime"
+        android:hint="Distance"
+        android:id="@+id/workoutDistance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_below="@id/workoutDistance"
+        android:id="@+id/workoutAddButton"
+        android:text="ADD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
+
+</FrameLayout>

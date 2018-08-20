@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "910607115935",
+    "firebase_url": "https://running-application.firebaseio.com",
+    "project_id": "running-application",
+    "storage_bucket": "running-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910607115935:android:d0f7ebed72d4932a",
+        "android_client_info": {
+          "package_name": "com.example.jorexa.shinyrunnigapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910607115935-vi1e2e3vr9fo3417kfbs97ec4elvre66.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jorexa.shinyrunnigapp",
+            "certificate_hash": "d213d9e1397a0c97c1758a5dd000f6cef781f112"
+          }
+        },
+        {
+          "client_id": "910607115935-3takgar32nniueuudlo7m3dero90mge5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK0h9rFx-8e2Zof4lGX82r4kxTWmKa-UI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "910607115935-3takgar32nniueuudlo7m3dero90mge5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
