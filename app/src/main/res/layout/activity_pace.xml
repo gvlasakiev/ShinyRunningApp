@@ -4,6 +4,246 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PaceActivity">
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Speed Converter"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:id="@+id/speedConverter"
+            />
+
+        <TextView
+            android:layout_below="@+id/speedConverter"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:text="PACE"
+            android:textSize="25dp"
+            android:layout_toLeftOf="@id/textSpeed"
+            android:layout_alignParentLeft="true"
+            android:textAlignment="center"
+            android:background="@android:color/white"
+            android:id="@+id/textPace"
+            />
+
+        <TextView
+            android:background="@android:color/white"
+            android:layout_below="@+id/speedConverter"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="SPEED"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:id="@+id/textSpeed"
+            />
+
+        <EditText
+            android:layout_below="@+id/textPace"
+            android:id="@+id/editPaceMin"
+            android:layout_width="40dp"
+            android:textSize="30dp"
+            android:hint="--"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_blue_bright"
+            android:layout_alignParentLeft="true"
+            android:inputType="numberDecimal"
+            />
+
+        <EditText
+            android:layout_below="@+id/textPace"
+            android:id="@+id/editPaceSec"
+            android:layout_width="65dp"
+            android:textSize="30dp"
+            android:hint="--"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_blue_bright"
+            android:layout_toRightOf="@id/editPaceMin"
+            android:inputType="numberDecimal"
+            />
+
+
+        <Button
+            android:layout_below="@id/textPace"
+            android:layout_toRightOf="@+id/editPaceSec"
+            android:layout_width="wrap_content"
+            android:text="&#62;"
+            android:textSize="15dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:id="@+id/clickPace"
+            />
+
+        <Button
+            android:layout_height="30dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_below="@id/clickPace"
+            android:layout_alignLeft="@id/clickPace"
+            android:layout_width="wrap_content"
+            android:text="&#60;"
+            android:padding="0dp"
+            android:id="@+id/clickSpeed"
+            />
+
+
+        <EditText
+            android:layout_below="@+id/textSpeed"
+            android:id="@+id/editSpeed"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:textSize="30dp"
+            android:hint="--"
+            android:layout_marginBottom="0dp"
+            android:background="@android:color/holo_blue_bright"
+            android:paddingBottom="3dp"
+            android:layout_toRightOf="@+id/clickPace"
+            android:inputType="numberDecimal"
+            />
+
+        <TextView
+            android:layout_below="@+id/editPaceMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="min/km"
+            android:textSize="15dp"
+            android:id="@+id/textMinKm"
+            />
+
+        <TextView
+            android:layout_below="@+id/editSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/clickSpeed"
+            android:text="km/h"
+            android:layout_gravity="center_horizontal"
+            android:textSize="15dp"
+            />
+
+        <Space
+            android:layout_below="@+id/textMinKm"
+            android:id="@+id/spaceLinear"
+            android:layout_width="1dp"
+            android:layout_height="30dp"/>
+
+
+        <TextView
+            android:layout_below="@id/spaceLinear"
+            android:layout_alignParentLeft="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter 2 values, calculate the 3rd."
+            android:id="@+id/textSecond"
+            android:textSize="25dp"
+            />
+
+        <EditText
+            android:layout_below="@+id/textSecond"
+            android:hint="h"
+            android:textSize="30dp"
+            android:width="60dp"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTimeHours"
+            />
+
+        <EditText
+            android:layout_below="@+id/textSecond"
+            android:hint="m"
+            android:textSize="30dp"
+            android:width="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTimeMinutes"
+            android:layout_toRightOf="@+id/editTimeHours"
+            />
+
+        <EditText
+            android:layout_below="@+id/textSecond"
+            android:hint="s"
+            android:textSize="30dp"
+            android:width="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTimeSecond"
+            android:layout_toRightOf="@+id/editTimeMinutes"
+            />
+
+        <Button
+            android:layout_below="@+id/textSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/editTimeSecond"
+            android:text="TIME"
+            android:id="@+id/buttonTime"
+            />
+
+        <EditText
+            android:layout_below="@+id/editTimeMinutes"
+            android:hint="m"
+            android:textSize="30dp"
+            android:width="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editPaceMinutes"
+            android:layout_toRightOf="@+id/editTimeHours"
+            />
+
+        <EditText
+            android:layout_below="@+id/editTimeSecond"
+            android:hint="s"
+            android:textSize="30dp"
+            android:width="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editPaceSecond"
+            android:layout_toRightOf="@+id/editPaceMinutes"
+            />
+
+        <Button
+            android:layout_below="@+id/buttonTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/editPaceSecond"
+            android:text="PACE"
+            android:id="@+id/buttonPace"
+            />
+
+        <EditText
+            android:layout_below="@+id/editPaceMinutes"
+            android:hint="km"
+            android:textSize="30dp"
+            android:width="180dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editDistanceKm"
+            android:layout_alignParentLeft="true"
+            />
+
+        <Button
+            android:layout_below="@+id/editPaceMinutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/editDistanceKm"
+            android:text="DISTANCE"
+            android:id="@+id/buttonDistance"
+            />
+
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
