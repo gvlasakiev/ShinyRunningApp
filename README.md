@@ -10,7 +10,7 @@ Add run-time activity to the database.
  Name of activity
  Date of activity
  Time of activity
- Distance of activity
+ Distance of activity.
 
 Listing runnig activity - 
-print a list of all the activities
+print a list of all the activities.
