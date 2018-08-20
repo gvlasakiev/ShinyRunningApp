@@ -30,29 +30,23 @@ public class MainActivity extends Activity  implements Navigator{
         mDb = FirebaseFirestore.getInstance();
         //hello = findViewById(R.id.hello);
 
-        ListWorkouts listWorkouts = ListWorkouts.newInstance();
-        listWorkouts.setNavigator(this);
+        //ListWorkouts listWorkouts = ListWorkouts.newInstance();
+        //listWorkouts.setNavigator(this);
+
+        PaceFragment pace = new PaceFragment();
 
         //Intent intent = new Intent(this, WorkoutsViewActivity.class);
 
         //startActivity(intent);
 
-        //AddWorkout addWorkout = new AddWorkout();
+        AddWorkout addWorkout = new AddWorkout();
 
         this.getFragmentManager()
                 .beginTransaction()
-                .replace(R.id.listWorkouts, listWorkouts).commit();
+                .replace(R.id.listWorkouts, pace).commit();
 
 
         mWorkoutsRepository = new FirebaseRepository<>(Workout.class);
-
-        //mWorkoutsRepository.getAll( workouts -> {
-            //for (Workout activity: workouts) {
-               // hello.setText(activity.date.toString());
-               // int b = 5;
-
-        //    }
-        //});
 
     }
 
