@@ -1,4 +1,4 @@
-Shiny Runing application:<br />
+Shiny Runing application:<br /><br />
 The app has the following features:<br />
 Pace calculator is extremely important for every runner. With him the runner measures the pace.<br /> 
 The first option is conversion from min/km to km/h.<br /> 
